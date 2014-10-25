@@ -4,5 +4,7 @@
     <string name="app_name">SpotyPy</string>
     <string name="action_settings">Settings</string>
     <string name="welcome_text">La música que te gusta</string>
+    <string name="title_activity_my_music">MyMusic</string>
+    <string name="hello_world">Hello world!</string>
 
 </resources>

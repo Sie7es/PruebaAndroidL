@@ -1,36 +1,38 @@
 package es.canarycode.spotypy;
 
 import android.app.Activity;
+import android.content.Intent;
+import android.graphics.Outline;
 import android.os.Bundle;
-import android.view.Menu;
-import android.view.MenuItem;
+
+import android.view.View;
+import android.widget.ImageButton;
+import android.widget.Toast;
 
 
 public class MyActivity extends Activity {
+    private ImageButton imageButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_my);
-    }
+
+        imageButton = (ImageButton) findViewById(R.id.fab_1);
 
 
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.my, menu);
-        return true;
+        int size = getResources().getDimensionPixelSize(R.dimen.fab_size); //Obtenemos los 56dp aconsejados por google
+        Outline outline = new Outline();                                    //Obj. que simula sombras usando el eje z
+        outline.setOval(0, 0, size, size);                                 //Creamos la sombra de forma circular porque nuestro botón es circular. Va como en CSS de arriba hacia la derecha
+
     }
 
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
-        if (id == R.id.action_settings) {
-            return true;
-        }
-        return super.onOptionsItemSelected(item);
+    
+    public void onClick(View view) {
+        Toast.makeText(getApplicationContext(), "Entrando", Toast.LENGTH_LONG).show();
+
+        startActivity(new Intent(getApplicationContext(), MyMusic.class));
+        
     }
+
 }
