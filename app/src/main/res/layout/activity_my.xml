@@ -17,7 +17,8 @@
        android:src="@drawable/header_bg"
        android:scaleType="centerCrop"
        android:layout_alignParentTop="true"
-       android:layout_centerHorizontal="true"/>
+       android:layout_centerHorizontal="true"
+       android:contentDescription="@string/action_settings" />
 
     <TextView
         android:text="@string/welcome_text"
@@ -54,7 +55,8 @@
             android:background="@drawable/ripple"
             android:elevation="4dp"
             android:onClick="onClick"
-            android:src="@drawable/login"/>
+            android:src="@drawable/login"
+            android:contentDescription="@string/action_settings" />
 
     </LinearLayout>
 
