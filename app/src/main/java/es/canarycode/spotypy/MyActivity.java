@@ -24,10 +24,13 @@ public class MyActivity extends Activity {
         int size = getResources().getDimensionPixelSize(R.dimen.fab_size); //Obtenemos los 56dp aconsejados por google
         Outline outline = new Outline();                                    //Obj. que simula sombras usando el eje z
         outline.setOval(0, 0, size, size);                                 //Creamos la sombra de forma circular porque nuestro botón es circular. Va como en CSS de arriba hacia la derecha
-
     }
 
-    
+
+
+
+
+    //Método para evento asignado a la vista através del fichero xml correspondiente.
     public void onClick(View view) {
         Toast.makeText(getApplicationContext(), "Entrando", Toast.LENGTH_LONG).show();
 
